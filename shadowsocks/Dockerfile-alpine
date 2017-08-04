@@ -1,0 +1,8 @@
+FROM alpine:3.5
+
+MAINTAINER Simonshyu <simon_xu@outlook.com> 
+
+RUN apk update && apk add py-pip
+RUN pip install shadowsocks==2.8.2
+
+ENTRYPOINT ["/usr/bin/ssserver"]
